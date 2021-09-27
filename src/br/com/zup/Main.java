@@ -14,6 +14,8 @@ public class Main {
         Professores professor5 = new Professores("Manoel", "77777777", "123456", "Uberlandia", 1500, "graduado", "Java");
         Administradores administrador = new Administradores("Marcos", "123456789", "15263478", "Manaus", 3500, "Diretor", "Concursado");
         Coordenadores coordenador = new Coordenadores("Sueli", "666666666", "147852", "Campinas", 2500);
+        Turma turma1 = new Turma(20);
+
 
         //Teste método aumento de sálario
         System.out.println(funcionarios.getSalario());
@@ -37,7 +39,7 @@ public class Main {
 
         //Teste para adicionar turma
         System.out.println(professor.getQtdTurmas());
-        professor.adicionaTurma(1);
+        professor.adicionaTurma(turma1);
         System.out.println(professor.getQtdTurmas());
         System.out.println("---------------------------------");
 

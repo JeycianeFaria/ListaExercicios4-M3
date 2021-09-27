@@ -1,5 +1,8 @@
 package br.com.zup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Professores extends Funcionarios {
 
     //atributos
@@ -7,6 +10,8 @@ public class Professores extends Funcionarios {
     private String disciplinaMinistrada;
     private int qtdAlunos;
     private int qtdTurmas;
+    public Turma turma;
+    public List<Turma> listaTurmas = new ArrayList<>();
 
 
     //construtor
@@ -46,18 +51,17 @@ public class Professores extends Funcionarios {
     }
 
     public int getQtdTurmas() {
+        qtdTurmas = listaTurmas.size();
         return qtdTurmas;
-    }
-
-    public void setQtdTurmas(int qtdTurmas) {
-        this.qtdTurmas = qtdTurmas;
     }
 
 
     //Métodos
     //Adiciona Turma
-    public void adicionaTurma(int turma){
-        qtdTurmas = qtdTurmas + turma;
+    public void adicionaTurma(Turma turma){
+
+        listaTurmas.add(turma);
+
     }
 
 }
