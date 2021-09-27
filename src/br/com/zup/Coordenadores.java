@@ -1,9 +1,13 @@
 package br.com.zup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Coordenadores extends Funcionarios {
 
     //atributos
     private int qtdprofSupervisionados;
+    public List<Professores> listaProfessores = new ArrayList<>();
 
 
     //construtor
@@ -17,11 +21,8 @@ public class Coordenadores extends Funcionarios {
 
     //getters e setters
     public int getQtdprofSupervisionados() {
+        qtdprofSupervisionados = listaProfessores.size();
         return qtdprofSupervisionados;
-    }
-
-    public void setQtdprofSupervisionados(int qtdprofSupervisionados) {
-        this.qtdprofSupervisionados = qtdprofSupervisionados;
     }
 
 
@@ -34,4 +35,23 @@ public class Coordenadores extends Funcionarios {
         double salarioAtualizado = getSalario() + aumento;
         setSalario(salarioAtualizado);
     }
+
+    //adiciona professores a Lista
+    public void adicionaProfessor(Professores professor){
+
+        if (listaProfessores.size() < 5){
+            listaProfessores.add(professor);
+        }else{
+            System.out.println("Coordenador com número máximo de professores supervisionados atingido!!");
+        }
+
+    }
+
+    //exibir Lista de Professores Supervisionado
+    public void professoresSupervisionados(){
+        for (Professores referencia : listaProfessores){
+            System.out.println("Professor: " + referencia.getNome());
+        }
+    }
+
 }
