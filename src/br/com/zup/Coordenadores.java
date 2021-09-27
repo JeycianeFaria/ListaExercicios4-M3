@@ -25,4 +25,13 @@ public class Coordenadores extends Funcionarios {
     }
 
 
+    //Métodos
+    //Aumento de sálario para coordenadores
+    @Override
+    public void aumentoSalario(){
+        double porcentagemAumento = 0.05;
+        double aumento = getSalario() * porcentagemAumento;
+        double salarioAtualizado = getSalario() + aumento;
+        setSalario(salarioAtualizado);
+    }
 }

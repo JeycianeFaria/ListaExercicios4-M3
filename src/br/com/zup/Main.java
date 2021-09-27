@@ -24,7 +24,11 @@ public class Main {
         System.out.println(administrador.getSalario());
         System.out.println("---------------------------------");
 
-
+        //Teste sobrescrita do método aumento de sálarios para coordenadores
+        System.out.println(coordenador.getSalario());
+        coordenador.aumentoSalario();
+        System.out.println(coordenador.getSalario());
+        System.out.println("---------------------------------");
 
     }
 }
