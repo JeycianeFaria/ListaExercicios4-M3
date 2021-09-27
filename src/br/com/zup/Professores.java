@@ -53,4 +53,11 @@ public class Professores extends Funcionarios {
         this.qtdTurmas = qtdTurmas;
     }
 
+
+    //Métodos
+    //Adiciona Turma
+    public void adicionaTurma(int turma){
+        qtdTurmas = qtdTurmas + turma;
+    }
+
 }

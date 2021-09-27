@@ -30,5 +30,12 @@ public class Main {
         System.out.println(coordenador.getSalario());
         System.out.println("---------------------------------");
 
+        //Teste para adicionar turma
+        System.out.println(professor.getQtdTurmas());
+        professor.adicionaTurma(1);
+        System.out.println(professor.getQtdTurmas());
+
+
+
     }
 }
