@@ -1,6 +1,6 @@
 package br.com.zup;
 
-public class Administradores extends Funcionários{
+public class Administradores extends Funcionarios {
 
     //atributos
     private String funcaoAdministrativa;

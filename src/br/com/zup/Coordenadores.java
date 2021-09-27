@@ -1,6 +1,6 @@
 package br.com.zup;
 
-public class Coordenadores extends Funcionários {
+public class Coordenadores extends Funcionarios {
 
     //atributos
     private int qtdprofSupervisionados;

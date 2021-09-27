@@ -1,6 +1,6 @@
 package br.com.zup;
 
-public class Funcionários {
+public class Funcionarios {
 
     //atributos
     private String nome;
@@ -11,10 +11,10 @@ public class Funcionários {
 
 
     //construtor
-    public Funcionários() {
+    public Funcionarios() {
     }
 
-    public Funcionários(String nome, String cpf, String numRegistro, String orgaoLotacao, double salario) {
+    public Funcionarios(String nome, String cpf, String numRegistro, String orgaoLotacao, double salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.numRegistro = numRegistro;
@@ -62,6 +62,16 @@ public class Funcionários {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+
+    //métodos
+    //Para aumentar o sálario de todos os funcionários
+    public void aumentoSalario(){
+        double porcentagemAumento = 0.1;
+        double aumento = salario * porcentagemAumento;
+        double salarioAtualizado = salario + aumento;
+        salario = salarioAtualizado;
     }
 
 }
