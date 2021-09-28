@@ -7,7 +7,7 @@ public class Coordenadores extends Funcionarios {
 
     //atributos
     private int qtdprofSupervisionados;
-    public List<Professores> listaProfessores = new ArrayList<>();
+    public List<Professores> professoresSupervisionados = new ArrayList<>();
 
 
     //construtor
@@ -21,7 +21,7 @@ public class Coordenadores extends Funcionarios {
 
     //getters e setters
     public int getQtdprofSupervisionados() {
-        qtdprofSupervisionados = listaProfessores.size();
+        qtdprofSupervisionados = professoresSupervisionados.size();
         return qtdprofSupervisionados;
     }
 
@@ -39,17 +39,17 @@ public class Coordenadores extends Funcionarios {
     //adiciona professores a Lista
     public void adicionaProfessor(Professores professor){
 
-        if (listaProfessores.size() < 5){
-            listaProfessores.add(professor);
+        if (professoresSupervisionados.size() < 5){
+            professoresSupervisionados.add(professor);
         }else{
             System.out.println("Coordenador com número máximo de professores supervisionados atingido!!");
         }
 
     }
 
-    //exibir Lista de Professores Supervisionado
-    public void professoresSupervisionados(){
-        for (Professores referencia : listaProfessores){
+    //exibir Lista de Professores Supervisionados
+    public void listaProfessoresSupervisionados(){
+        for (Professores referencia : professoresSupervisionados){
             System.out.println("Professor: " + referencia.getNome());
         }
     }

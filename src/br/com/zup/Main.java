@@ -15,6 +15,9 @@ public class Main {
         Administradores administrador = new Administradores("Marcos", "123456789", "15263478", "Manaus", 3500, "Diretor", "Concursado");
         Coordenadores coordenador = new Coordenadores("Sueli", "666666666", "147852", "Campinas", 2500);
         Turma turma1 = new Turma(20);
+        Turma turma2 = new Turma(20);
+        Turma turma3 = new Turma(20);
+        Turma turma4 = new Turma(20);
 
 
         //Teste método aumento de sálario
@@ -45,34 +48,39 @@ public class Main {
 
 
         //Teste do adicionar Professores para coordenadores
-        System.out.println(coordenador.listaProfessores);
+        coordenador.listaProfessoresSupervisionados();
         coordenador.adicionaProfessor(professor);
-        coordenador.professoresSupervisionados();
+        coordenador.listaProfessoresSupervisionados();
         System.out.println(coordenador.getQtdprofSupervisionados());
         System.out.println("---------------------------------");
         coordenador.adicionaProfessor(professor1);
-        coordenador.professoresSupervisionados();
+        coordenador.listaProfessoresSupervisionados();
         System.out.println(coordenador.getQtdprofSupervisionados());
         System.out.println("---------------------------------");
         coordenador.adicionaProfessor(professor2);
-        coordenador.professoresSupervisionados();
+        coordenador.listaProfessoresSupervisionados();
         System.out.println(coordenador.getQtdprofSupervisionados());
         System.out.println("---------------------------------");
         coordenador.adicionaProfessor(professor3);
-        coordenador.professoresSupervisionados();
+        coordenador.listaProfessoresSupervisionados();
         System.out.println(coordenador.getQtdprofSupervisionados());
         System.out.println("---------------------------------");
         coordenador.adicionaProfessor(professor4);
-        coordenador.professoresSupervisionados();
+        coordenador.listaProfessoresSupervisionados();
         System.out.println(coordenador.getQtdprofSupervisionados());
         System.out.println("---------------------------------");
         coordenador.adicionaProfessor(professor5);
-        coordenador.professoresSupervisionados();
+        coordenador.listaProfessoresSupervisionados();
         System.out.println(coordenador.getQtdprofSupervisionados());
         System.out.println("---------------------------------");
 
 
-        //
+        //Teste qtdTotalAlunos
+        System.out.println(professor.qtdTotalAlunos());
+        professor.adicionaTurma(turma2);
+        System.out.println(professor.qtdTotalAlunos());
+        professor.adicionaTurma(turma3);
+        System.out.println(professor.qtdTotalAlunos());
 
     }
 }
